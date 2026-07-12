@@ -104,14 +104,14 @@ const TextAnalysisPage = () => {
               <div>
                 <p className="text-sm text-slate-400">Trust Score</p>
                 <p className="mt-2 text-2xl font-semibold text-cyan-300">
-                  {result.trustScore ?? result.trust_score}%
+                  {result.trustScore ?? result.trustscore}%
                 </p>
               </div>
 
               <div>
                 <p className="text-sm text-slate-400">Scam Probability</p>
                 <p className="mt-2 text-2xl font-semibold text-violet-300">
-                  {result.scamProbability ?? result.scam_probability}%
+                  {result.scamProbability ?? result.scamprobability}%
                 </p>
               </div>
             </div>
