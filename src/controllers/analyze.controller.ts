@@ -19,7 +19,7 @@ export const analyzeText = async (
     }
 
     const response = await fetch(
-      "http://127.0.0.1:8000/analyze-text",
+      "https://scam-detector-api-4oov.onrender.com/analyze-text",
       {
         method: "POST",
 
@@ -103,7 +103,7 @@ export const analyzeAudio = async (
     formData.append("engine", "local");
 
     const response = await axios.post(
-      "http://127.0.0.1:8000/analyze-audio",
+      "https://scam-detector-api-4oov.onrender.com/analyze-audio",
       formData,
       {
         headers: formData.getHeaders(),
@@ -210,7 +210,7 @@ export const analyzeImage = async (
     );
 
     const response = await axios.post(
-      "http://127.0.0.1:8000/analyze-image",
+      "https://scam-detector-api-4oov.onrender.com/analyze-image",
       formData,
       {
         headers: formData.getHeaders(),
