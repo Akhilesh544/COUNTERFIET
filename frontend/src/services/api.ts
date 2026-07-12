@@ -22,27 +22,33 @@ api.interceptors.request.use((config) => {
 });
 
 export const authApi = {
-  register: (payload: { name: string; email: string; password: string }) => api.post('/auth/register', payload),
-  login: (payload: { email: string; password: string }) => api.post('/auth/login', payload),
+  register: (payload: { name: string; email: string; password: string }) =>
+    api.post("/api/auth/register", payload),
+
+  login: (payload: { email: string; password: string }) =>
+    api.post("/api/auth/login", payload),
 };
 
 export const userApi = {
-  getProfile: () => api.get('/user/profile'),
+  getProfile: () => api.get("/api/user/profile"),
 };
 
 export const analyzeApi = {
-  analyzeText: (text: string) => api.post('/analyze/text', { text }),
+  analyzeText: (text: string) =>
+    api.post("/api/analyze/text", { text }),
+
   analyzeAudio: (file: File) => {
     const formData = new FormData();
-    formData.append('file', file);
-    return api.post('/analyze/audio', formData);
+    formData.append("file", file);
+    return api.post("/api/analyze/audio", formData);
   },
+
   analyzeImage: (file: File) => {
     const formData = new FormData();
-    formData.append('file', file);
-    return api.post('/analyze/image', formData);
+    formData.append("file", file);
+    return api.post("/api/analyze/image", formData);
   },
-  getHistory: () => api.get('/analyze/history'),
-};
 
+  getHistory: () => api.get("/api/analyze/history"),
+};
 export default api;
