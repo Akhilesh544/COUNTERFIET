@@ -116,14 +116,14 @@ const AudioAnalysisPage = () => {
               <div>
                 <p className="text-sm text-slate-400">Trust Score</p>
                 <p className="mt-2 text-2xl font-semibold text-cyan-300">
-                  {result.trustScore ?? result.trustscore}%
+                  {result.trustScore ?? 0}%
                 </p>
               </div>
 
               <div>
                 <p className="text-sm text-slate-400">Scam Probability</p>
                 <p className="mt-2 text-2xl font-semibold text-violet-300">
-                  {result.scamProbability ?? result.scamprobability}%
+                  {result.scamProbability ?? 0}%
                 </p>
               </div>
             </div>
